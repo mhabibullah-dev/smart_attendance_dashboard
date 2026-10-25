@@ -1,0 +1,346 @@
+==============================================================================
+  SMART ATTENDANCE DASHBOARD (OMEGA) — PDF REPORT GUIDE
+  Assignment: Smart Attendance Dashboard | Flutter | Layout & Value Widgets
+==============================================================================
+
+HOW TO USE THIS FILE:
+  - This file tells you EXACTLY what to write under each heading in your PDF
+    and WHERE to place each screenshot.
+  - Follow the page order below. Do NOT exceed 10 pages total.
+  - All screenshots must show the FULL VS Code screen + emulator + taskbar.
+  - Use readable font size (11–12 pt body, 14–16 pt headings).
+==============================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 1 — COVER PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Smart Attendance Dashboard
+Sub-heading: Question # 1 — Omega Task
+
+Text to include (center-aligned on page):
+  Course:       Mobile Application Development (MAD)
+  Student Name: Muhammad Abdullah
+  Reg. Number:  22-SE-001   (replace with your actual reg. number)
+  Section:      [Your Section, e.g., SE-5A]
+  Submitted To: [Your Instructor's Name]
+  Date:         [Submission Date]
+
+Screenshot placement:
+  ► NO screenshot on this page. This is a plain title page only.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 2 — INTRODUCTION & OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Introduction
+
+Text:
+  This assignment implements a Smart Attendance Dashboard for students using
+  the Flutter framework. The application is built entirely within a single
+  file — main.dart — without any external packages or additional Dart files.
+
+  The app consists of two screens:
+
+  Screen 1 (Student Info Screen): Displays the student's name, registration
+  number, session, department, and university using value widgets (Text, Icon,
+  ElevatedButton). Tapping "Mark Attendance" navigates to Screen 2 and passes
+  the student name and registration number as route arguments.
+
+  Screen 2 (Attendance Screen): Shows a non-editable TextField with the
+  registration number received from Screen 1. A ListView contains six
+  hardcoded subjects. Each subject card has two number TextFields (total
+  lectures and attended lectures), a "Calculate" ElevatedButton, and a Text
+  widget that displays the calculated attendance percentage for that subject.
+  A "Calculate Overall Attendance" button at the bottom computes and shows the
+  average percentage across all subjects.
+
+Heading: Objective
+
+Text:
+  To demonstrate the use of Flutter's layout widgets (Column, Row, ListView,
+  Expanded) and value widgets (Text, TextField, Icon, ElevatedButton) together
+  to build an interactive student attendance management interface.
+
+Screenshot placement:
+  ► NO screenshot on this page. Introduction text only.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 3 — PROJECT HIERARCHY (File Structure)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Project File Structure
+
+Text:
+  The project follows the standard Flutter project structure. All application
+  logic and UI code resides in a single file: lib/main.dart. No additional
+  Dart files or third-party packages were used, as per the assignment
+  constraints.
+
+Screenshot placement:
+  ► SCREENSHOT 1 — Project Hierarchy
+    HOW TO TAKE IT:
+      1. Open VS Code with the smart_attendance_dashboard project.
+      2. Click the Explorer panel on the left sidebar so the file tree is visible.
+      3. Expand the project folder to show: lib/, android/, ios/, pubspec.yaml, etc.
+      4. Expand the lib/ folder so that main.dart is visible inside it.
+      5. Take a full screenshot of the ENTIRE VS Code window (including your
+         taskbar at the bottom of the screen).
+    WHAT SHOULD BE VISIBLE:
+      - The full VS Code window with the Explorer panel open on the left.
+      - The project folder tree showing lib/main.dart highlighted/visible.
+      - Your laptop's taskbar at the bottom.
+    CAPTION TO USE IN PDF:
+      "Figure 1: Project file hierarchy showing lib/main.dart as the single
+       application file."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 4 — CODE: APP ROOT & SCREEN 1 (Student Info Screen)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Code — App Entry Point & Student Info Screen
+
+Text:
+  The app entry point (main()) runs SmartAttendanceApp, which configures a
+  dark MaterialApp theme using a premium Deep Teal (#00897B) and Amber Gold
+  (#FFB300) color palette. The StudentInfoScreen (Screen 1) is a StatelessWidget
+  that displays student data using Text, Icon, and ElevatedButton value widgets,
+  organized with Column, Row, and Container layout widgets.
+
+Screenshot placement:
+  ► SCREENSHOT 2 — App Root & Screen 1 Code
+    HOW TO TAKE IT:
+      1. Open lib/main.dart in VS Code.
+      2. Scroll to the TOP of the file (line 1 – approx. line 85).
+         This section contains: main(), SmartAttendanceApp class, and the
+         ThemeData configuration.
+      3. Take a full screenshot of the entire VS Code screen showing this code.
+         Make sure the emulator running Screen 1 (Student Info) is visible
+         side by side or the emulator window is visible on screen.
+      4. Include your taskbar.
+    WHAT SHOULD BE VISIBLE:
+      - VS Code editor showing lines ~1–85 (main, SmartAttendanceApp, theme).
+      - The running emulator showing Screen 1 (Student profile with teal card,
+        name "Muhammad Abdullah", reg "22-SE-001", and "Mark Attendance" button).
+      - Laptop taskbar.
+    CAPTION TO USE IN PDF:
+      "Figure 2: App root code with theme configuration (left) and Screen 1
+       output on emulator (right)."
+
+  ► SCREENSHOT 3 — StudentInfoScreen Widget Code
+    HOW TO TAKE IT:
+      1. In main.dart, scroll to the StudentInfoScreen class (approx. line 87–257).
+      2. Show the part with the Column, CircleAvatar profile icon, Text widgets
+         for name/reg, and the ElevatedButton "Mark Attendance".
+      3. Full VS Code screen + emulator + taskbar.
+    CAPTION TO USE IN PDF:
+      "Figure 3: StudentInfoScreen code showing layout widgets (Column, Row)
+       and value widgets (Text, Icon, ElevatedButton)."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 5 — CODE: SCREEN 2 (Attendance Screen) — PART 1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Code — Attendance Screen (State & Logic)
+
+Text:
+  AttendanceScreen is a StatefulWidget. Its state class (_AttendanceScreenState)
+  holds lists of TextEditingControllers for each subject row, a list for storing
+  per-subject percentages, and the overall attendance result. The _calculateSubject()
+  method validates inputs and uses setState() to update the percentage Text widget
+  for the corresponding subject. The _calculateOverall() method averages all
+  subject percentages and triggers a rebuild via setState().
+
+Screenshot placement:
+  ► SCREENSHOT 4 — AttendanceScreen State & Logic Code
+    HOW TO TAKE IT:
+      1. Scroll to the AttendanceScreen class (approx. line 316–428 in main.dart).
+      2. Show the state variables, _calculateSubject(), and _calculateOverall() methods.
+      3. Full VS Code screen + emulator showing Screen 2 (Attendance screen with
+         subject list visible) + taskbar.
+    CAPTION TO USE IN PDF:
+      "Figure 4: AttendanceScreen state management and calculation logic —
+       setState() drives widget rebuilds on each calculation."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 6 — CODE: SCREEN 2 (Attendance Screen) — PART 2 & SUBJECT CARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Code — Attendance Screen UI & Subject Card Widget
+
+Text:
+  The build() method of AttendanceScreen uses a Column as the root layout, with
+  an Expanded widget wrapping a SingleChildScrollView for the scrollable subject
+  list. A ListView.separated renders each _SubjectCard. The bottom section
+  (pinned outside the scroll) contains the "Calculate Overall Attendance"
+  ElevatedButton and the overall result Text widget.
+
+  The _SubjectCard widget uses a Column to stack the subject name row, the two
+  input TextFields in a Row, and the Calculate button + result row at the bottom.
+
+Screenshot placement:
+  ► SCREENSHOT 5 — AttendanceScreen Build Method & Subject Card Code
+    HOW TO TAKE IT:
+      1. Scroll to approx. line 437–800 in main.dart (the build() method of
+         AttendanceScreen and the _SubjectCard class).
+      2. Show the Column → Expanded → ListView structure clearly.
+      3. Full VS Code screen + emulator showing attendance screen with some
+         percentages already calculated (enter some numbers and press Calculate
+         for 2–3 subjects before taking the screenshot) + taskbar.
+    CAPTION TO USE IN PDF:
+      "Figure 5: AttendanceScreen build() method with ListView and _SubjectCard
+       showing subject attendance inputs and calculated percentages."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 7 — OUTPUT: SCREEN 1 (Student Info Screen)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Output — Screen 1: Student Info Screen
+
+Text:
+  Screen 1 displays the student's profile card with a teal avatar icon, the
+  student name "Muhammad Abdullah" in bold white text, and the registration
+  number "22-SE-001" highlighted in amber gold. Three info cards below display
+  the session (2022–2026), department (Software Engineering), and university
+  (FAST-NUCES) using Row layout with an icon and text in each card. The full-
+  width teal "Mark Attendance" button at the bottom navigates to Screen 2 when
+  tapped, passing the student name and registration number.
+
+Screenshot placement:
+  ► SCREENSHOT 6 — Screen 1 Full Output
+    HOW TO TAKE IT:
+      1. Run the app on the emulator. The first screen shown is the Student
+         Info Screen.
+      2. Make sure VS Code is open alongside the emulator.
+      3. Take a full screenshot of the ENTIRE desktop: VS Code + emulator showing
+         Screen 1 fully loaded + your laptop taskbar.
+    WHAT SHOULD BE VISIBLE:
+      - Teal profile avatar with person icon.
+      - Student name "Muhammad Abdullah" and reg "22-SE-001" in gold.
+      - Three info cards: Session, Department, University.
+      - Green "Mark Attendance" button at the bottom.
+    CAPTION TO USE IN PDF:
+      "Figure 6: Screen 1 — Student Info Screen showing student profile,
+       info cards, and Mark Attendance button."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 8 — OUTPUT: SCREEN 2 (Attendance Screen — Subjects & Per-Subject %)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Output — Screen 2: Attendance Screen (Subject Calculation)
+
+Text:
+  After tapping "Mark Attendance", the app navigates to Screen 2. The AppBar
+  shows "Attendance for Muhammad Abdullah". The non-editable TextField at the
+  top displays the registration number "22-SE-001" (read-only, styled in gold).
+  The ListView below lists all 6 subjects: Artificial Intelligence, Mobile App
+  Dev (MAD), DBMS Lab, Object Oriented Programming, Calculus & Analytical
+  Geometry, and English Communication. Each subject card contains two number
+  input TextFields (Total Lectures / Attended) and a "Calculate" button. Once
+  pressed, the attendance percentage for that subject appears below the button
+  in a color-coded Text widget (teal ≥ 75%, gold = 60–74%, red < 60%).
+
+Screenshot placement:
+  ► SCREENSHOT 7 — Screen 2 with Some Subjects Calculated
+    HOW TO TAKE IT:
+      1. Navigate to Screen 2 by tapping "Mark Attendance" on the emulator.
+      2. Enter values for at least 3–4 subjects:
+           Example — AI:       Total=40, Attended=35 → 87.5%  (teal)
+                     MAD:      Total=38, Attended=22 → 57.9%  (red)
+                     DBMS Lab: Total=30, Attended=25 → 83.3%  (teal)
+                     OOP:      Total=35, Attended=28 → 80.0%  (teal)
+      3. Press "Calculate" for each subject so the percentages appear.
+      4. Full screenshot of VS Code + emulator showing Screen 2 with
+         percentages visible + taskbar.
+    CAPTION TO USE IN PDF:
+      "Figure 7: Screen 2 — Attendance Screen showing per-subject attendance
+       percentages calculated using TextFields and ElevatedButton."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 9 — OUTPUT: SCREEN 2 (Overall Attendance Calculation)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Output — Screen 2: Overall Attendance Result
+
+Text:
+  After all six subjects have been individually calculated, the user taps
+  "Calculate Overall Attendance" (the amber gold button pinned at the bottom).
+  The app computes the average percentage across all subjects and displays it
+  in a color-coded result box. The result is shown as: "Overall Attendance: XX.X%".
+  If the overall is >= 75%, the result box appears in teal with a check-circle
+  icon. If it falls below 75%, it appears in amber or red with a warning icon.
+
+Screenshot placement:
+  ► SCREENSHOT 8 — Screen 2 with Overall Attendance Displayed
+    HOW TO TAKE IT:
+      1. After calculating all 6 subjects individually, scroll to the bottom
+         of Screen 2 on the emulator.
+      2. Tap the gold "Calculate Overall Attendance" button.
+      3. The overall attendance result box should appear below the button.
+      4. Full screenshot of the desktop showing VS Code + emulator with the
+         overall result visible + taskbar.
+    WHAT SHOULD BE VISIBLE:
+      - The gold "Calculate Overall Attendance" button.
+      - The result box below it showing e.g. "Overall Attendance: 78.5%"
+        with a teal border and check-circle icon.
+    CAPTION TO USE IN PDF:
+      "Figure 8: Screen 2 — Overall attendance calculated and displayed
+       as an average of all subject percentages."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PAGE 10 — EXPLANATION & CONCLUSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Heading: Explanation
+
+Copy the following text EXACTLY into this section of your PDF:
+
+---
+
+  1. Layout Widgets: Column organises all UI sections top-to-bottom on both
+     screens. Row lays out the two TextFields (total / attended) side by side
+     in each subject card, and ListView stacks all subject cards vertically
+     inside a scrollable view. Expanded ensures widgets fill available space.
+
+  2. Value Widgets: Text displays static and dynamic data (student info and
+     attendance percentages). TextField captures numeric input from the user
+     (total and attended lectures). ElevatedButton triggers both per-subject
+     and overall calculations, and Icon provides visual cues for each category.
+
+  3. Widget Rebuilding: setState() is called inside _calculateSubject() and
+     _calculateOverall(). Every setState() call marks the widget as "dirty",
+     causing Flutter to schedule a rebuild. During the rebuild the updated
+     _subjectPercentage list and _overallAttendance value are read from state,
+     so the Text widgets that render percentages automatically show the new
+     values — no manual DOM manipulation required, Flutter handles it all.
+
+---
+
+Heading: Conclusion
+
+Text:
+  This Smart Attendance Dashboard demonstrates how Flutter's layout and value
+  widgets work together to create an interactive, data-driven mobile application.
+  By combining Column, Row, ListView, and Expanded for structure with Text,
+  TextField, Icon, and ElevatedButton for interaction, the app achieves a clean
+  and functional design. The setState() mechanism ensures the UI remains
+  synchronized with the underlying data without any additional state management
+  packages.
+
+Screenshot placement:
+  ► NO screenshot on this page. Text-only explanation page.
+
+==============================================================================
+  END OF PDF REPORT GUIDE
+  Total pages planned: 10 (Cover + Intro + Hierarchy + 3 Code + 3 Output + Explanation)
+==============================================================================
